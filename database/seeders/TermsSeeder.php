@@ -12,10 +12,13 @@ class TermsSeeder extends Seeder
      *
      * @return void
      */
-    DB::table('terms')->insert([
-        ['name' => 'Term One',
-        'status' => 10,],
-        ['name' => 'Term Two',
-        'status' => 10,]
-    ]);
+    public function run()
+    {
+        DB::table('terms')->insert([
+            ['name' => 'Term One',
+            'status' => 10,],
+            ['name' => 'Term Two',
+            'status' => 10,]
+        ]);
+    }
 }
