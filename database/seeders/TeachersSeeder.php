@@ -13,6 +13,11 @@ class TeachersSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('teachers')->insert([
+            ['name' => 'Katie',
+            'status' => 10,],
+            ['name' => 'Max',
+            'status' => 10,]
+        ]);
     }
 }
