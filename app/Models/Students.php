@@ -11,4 +11,8 @@ class Students extends Model
     protected $fillable = [
         'name', 'age','gender','reportingTeacher'
     ];
+    public function teacher()
+    {
+        return $this->belongsTo(Teachers::class,'reportingTeacher');
+    }
 }
