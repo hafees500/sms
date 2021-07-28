@@ -14,10 +14,11 @@ use App\Http\Controllers\MarksController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+Route::get('/', [StudentsController::class,'index']);
 // Application Routes
 
 # Student Routers
