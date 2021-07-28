@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Students</a>
+                        <a class="nav-link" href="{{ url('students') }}">Students</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Marks</a>
+                        <a class="nav-link" href="{{ url('marks') }}">Marks</a>
                     </li>
                 </ul>
                 

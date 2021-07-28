@@ -28,7 +28,7 @@
                         <td>{{date("M d, Y h:i A",strtotime($student->created_at))}}</td>
                         <td>
                             <div class="action-button">
-                                <form action="{{ url('students/delete-student',[$student->id]) }}" method="POST">
+                                <form action="{{ url('students/delete',[$student->id]) }}" method="POST">
                                     <a class="btn btn-outline-primary btn-xs" href="{{ url('students/update-student',[$student->id]) }}" title="Edit"><i class="fas fa-edit"></i></a>
 
                                     @csrf
@@ -45,6 +45,9 @@
                     </tr>
                     @endforeach
                 </table>
+            </div>
+            <div class="d-flex justify-content-center">
+                {!! $students->links('pagination::bootstrap-4') !!}
             </div>
         </div>
     </div>
