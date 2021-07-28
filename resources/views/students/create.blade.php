@@ -7,7 +7,6 @@
         </div>
         <div class="card-body">
             {{ Form::open(array('url' => url('students/store'),'method' => 'POST','class'=>'form-horizontal')) }}
-            
             <div class="form-group">
                 <label for="exampleInputName">Name</label>
                 {{Form::text('name', '',['class'=>'form-control','placeholder'=>'Enter Name'])}}
@@ -32,7 +31,6 @@
             <div class="form-group">
                 <label for="exampleInputReportingTeacher">Reporting Teacher</label>
                 {{ Form::select('reportingTeacher', $teachers, '', ['id' => 'teacher','class'=>'form-control','placeholder'=>'Select Teacher']) }}
-
                 @if ($errors->has('reportingTeacher'))
                 <span class="text-danger">{{ $errors->first('reportingTeacher') }}</span>
                 @endif

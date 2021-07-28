@@ -9,28 +9,28 @@
             {{ Form::open(array('url' => url('students/update',[$student->id]),'method' => 'PUT','class'=>'form-horizontal')) }}
             
             <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
+                <label for="exampleInputName">Name</label>
                 {{Form::text('name', $student->name,['class'=>'form-control','placeholder'=>'Enter Name'])}}
                 @if ($errors->has('name'))
                 <span class="text-danger">{{ $errors->first('name') }}</span>
                 @endif
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Age</label>
+                <label for="exampleInputAge">Age</label>
                 {{Form::number('age', $student->age,['class'=>'form-control','placeholder'=>'Enter Age'])}}
                 @if ($errors->has('age'))
                 <span class="text-danger">{{ $errors->first('age') }}</span>
                 @endif
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Gender</label>
+                <label for="exampleInputGender">Gender</label>
                 {{ Form::select('gender', ['Male'=>'Male','Female'=>'Female'], $student->gender, ['id' => 'gender','class'=>'form-control','placeholder'=>'Select Gender']) }}
                 @if ($errors->has('gender'))
                 <span class="text-danger">{{ $errors->first('gender') }}</span>
                 @endif
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Reporting Teacher</label>
+                <label for="exampleInputReporting">Reporting Teacher</label>
                 {{ Form::select('reportingTeacher', $teachers, $student->reportingTeacher, ['id' => 'teacher','class'=>'form-control','placeholder'=>'Select Teacher']) }}
 
                 @if ($errors->has('reportingTeacher'))
